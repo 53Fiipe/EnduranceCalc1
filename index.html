@@ -6,103 +6,127 @@
     <title>LTHR Calculator</title>
     <link rel="stylesheet" href="table.css"> <!-- Link to your CSS file -->
     <style>
-        body {
-            font-family: Helvetica;
-            -webkit-font-smoothing: antialiased;
-            background: rgba(255, 255, 255, 0.925);
-            padding: 20px;
-        }
+body {
+  font-family: Helvetica;
+  -webkit-font-smoothing: antialiased;
+  background: rgba(255, 255, 255, 0.925);
+  padding: 2em; /* changed from 20px to 2em */
+}
 
-        .table-wrapper {
-            margin: 10px 20px 20px;
-            box-shadow: 0px 35px 40px #F8F8F8;
-        }
+.table-wrapper {
+  margin: 2em; /* changed from 10px 20px 20px to 2em */
+  box-shadow: 0px 35px 40px #F8F8F8;
+  width: 80%; /* added width in percentage */
+  margin: 0 auto; /* center the table wrapper */
+}
 
-        .fl-table {
-            border-radius: 50px;
-            font-size: 12px;
-            font-weight: normal;
-            border: none;
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 100%;
-            white-space: nowrap;
-            background-color: rgb(255, 255, 255);
-        }
+.fl-table {
+  border-radius: 50px;
+  font-size: 1em; /* changed from 12px to 1em */
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-        .fl-table td,
-        .fl-table th {
-            text-align: center;
-            padding: 20px;
-        }
+.fl-table td,
+.fl-table th {
+  text-align: center;
+  padding: 1em; /* changed from 20px to 1em */
+}
 
-        .fl-table td {
-            border-right: 10px solid #f8f8f8;
-            font-size: 12px;
-        }
+.fl-table td {
+  border-right: 1em solid #f8f8f8; /* changed from 10px to 1em */
+  font-size: 1em; /* changed from 12px to 1em */
+}
 
-        .fl-table thead th {
-            color: #ffffff;
-            background: #0390d6;
-        }
+.fl-table thead th {
+  color: #ffffff;
+  background: #0390d6;
+}
 
-        .fl-table thead th:nth-child(odd) {
-            color: #ffffff;
-            background: #0390d6;
-        }
+.fl-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #0390d6;
+}
 
-        .fl-table tr:nth-child(even) {
-            background: #f8f8f8;
-        }
+.fl-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
 
-        .custom-select {
-            position: relative;
-            display: inline-block;
-            width: 200px;
-            height: 40px; 
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            border-radius: 30px; 
-            overflow: hidden;
-            margin-right: 20px; 
-            margin-bottom: 10px; 
-        }
+.custom-select {
+  position: relative;
+  display: inline-block;
+  width: 30%; /* changed from 200px to 30% */
+  height: 2em; /* changed from 40px to 2em */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-right: 1em; /* changed from 20px to 1em */
+  margin-bottom: 1em; /* changed from 10px to 1em */
+}
 
-        .custom-select select {
-            width: calc(100% - 20px); 
-            height: 100%;
-            border: none;
-            background-color: transparent;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            padding: 10px;
-            font-size: 16px;
-            color: #333333;
-            cursor: pointer;
-            outline: none; 
-        }
+.custom-select select {
+  width: calc(100% - 2em); /* changed from 200px to calc(100% - 2em) */
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 1em; /* changed from 10px to 1em */
+  font-size: 1em; /* changed from 16px to 1em */
+  color: #333333;
+  cursor: pointer;
+  outline: none;
+}
 
-        .custom-select::after {
-            content: '\25BC';
-            position: absolute;
-            top: 50%;
-            right: 10px;
-            transform: translateY(-50%);
-            font-size: 16px;
-            pointer-events: none;
-        }
+.custom-select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 1em; /* changed from 10px to 1em */
+  transform: translateY(-50%);
+  font-size: 1em; /* changed from 16px to 1em */
+  pointer-events: none;
+}
 
-        input[type="number"] {
-            width: 200px;
-            height: 40px;
-            border-radius: 20px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            margin-right: 20px;
-            margin-bottom: 10px;
-        }
+input[type="number"] {
+  width: 30%; /* changed from 200px to 30% */
+  height: 2em; /* changed from 40px to 2em */
+  border-radius: 20px;
+  padding: 1em; /* changed from 10px to 1em */
+  font-size: 1em; /* changed from 16px to 1em */
+  border: 1px solid #ccc;
+  margin-right: 1em; /* changed from 20px to 1em */
+  margin-bottom: 1em; /* changed from 10px to 1em */
+}
+
+/* Media queries for different screen sizes */
+@media only screen and (max-width: 768px) {
+  .table-wrapper {
+    width: 90%;
+  }
+  .custom-select {
+    width: 40%;
+  }
+  input[type="number"] {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .table-wrapper {
+    width: 95%;
+  }
+  .custom-select {
+    width: 50%;
+  }
+  input[type="number"] {
+    width: 50%;
+  }
+}
     </style>
 </head>
 <body>
